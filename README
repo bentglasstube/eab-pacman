@@ -1,0 +1,26 @@
+Eatabrick Arch Package Repository
+
+Here you can find x86_64 packages for software I wrote and its dependencies.
+These packages are all signed with my GPG key which is available from
+keyservers with id 94FD72A0. Please email me with any issues.
+
+Instructions
+
+First you will need to fetch and sign my public GPG key
+
+      # pacman-key -r 94FD72A0
+      # pacman-key --lsign-key 94FD72A0
+
+
+Then you will need to add the following to pacman.conf:
+
+      [eatbrick]
+      SigLevel = Required
+      Server = http://repo.eatabrick.org/$arch
+
+
+Note that I only maintain packages for x86_64 at this time
+
+Now you should be all set to install whatever packages I am maintaining (after
+syncing pacman of course).
+
